@@ -322,3 +322,67 @@ p {
   padding-top: 140px;
   padding-bottom: 140px;
 }
+
+/* === SERVICES IMAGE CARDS (FINAL) === */
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  height: 420px;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+  border: none;
+}
+
+/* image fills card */
+.service-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: transform 0.6s ease;
+}
+
+/* dark gradient overlay */
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2));
+  z-index: 2;
+}
+
+/* text container */
+.service-overlay {
+  position: relative;
+  z-index: 3;
+  padding: 28px;
+  color: white;
+}
+
+/* heading */
+.service-overlay h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+/* paragraph */
+.service-overlay p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* hover effect */
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-card:hover .service-image {
+  transform: scale(1.05);
+}
