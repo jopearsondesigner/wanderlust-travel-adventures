@@ -130,6 +130,18 @@
     "Wanderlust Travel Adventures is led by Kristina, a luxury travel advisor who designs personalized trips with care, taste, and attention to every detail — from boutique hotels and private guides to seamless itineraries and meaningful experiences.";
 
   const advisorLinkText = data.homePage?.advisorLinkText ?? "Meet Kristina";
+
+  const finalCtaEyebrow =
+    data.homePage?.finalCtaEyebrow ??
+    "Personalized planning. Thoughtful details. Stress-free travel.";
+
+  const finalCtaHeading =
+    data.homePage?.finalCtaHeading ??
+    "Designed for the way you want to travel.";
+
+  const finalCtaText =
+    data.homePage?.finalCtaText ??
+    "Tell us what you’re dreaming of, and we’ll take care of every detail — from the first idea to the final itinerary.";
 </script>
 
 <svelte:head>
@@ -246,15 +258,11 @@
 </section>
 <section id="start" class="cta-section">
   <div class="cta-inner">
-    <p class="eyebrow">
-      Personalized planning. Thoughtful details. Stress-free travel.
-    </p>
-    <h2>Designed for the way you want to travel.</h2>
+    <p class="eyebrow">{finalCtaEyebrow}</p>
 
-    <p>
-      Tell us what you’re dreaming of, and we’ll take care of every detail —
-      from the first idea to the final itinerary.
-    </p>
+    <h2>{finalCtaHeading}</h2>
+
+    <p>{finalCtaText}</p>
 
     <a href={`mailto:${contactEmail}`} class="cta">{ctaText}</a>
   </div>

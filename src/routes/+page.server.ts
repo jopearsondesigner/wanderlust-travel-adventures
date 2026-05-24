@@ -47,7 +47,11 @@ export const load: PageServerLoad = async () => {
 			advisorEyebrow,
 			advisorHeading,
 			advisorText,
-			advisorLinkText
+			advisorLinkText,
+
+			finalCtaEyebrow,
+			finalCtaHeading,
+			finalCtaText
 		}`),
   ]);
 

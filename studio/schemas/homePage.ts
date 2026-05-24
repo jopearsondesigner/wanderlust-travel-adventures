@@ -166,6 +166,22 @@ export const homePage = defineType({
             name: 'advisorLinkText',
             title: 'Advisor Link Text',
             type: 'string'
+        }),
+        defineField({
+            name: 'finalCtaEyebrow',
+            title: 'Final CTA Eyebrow',
+            type: 'string'
+        }),
+        defineField({
+            name: 'finalCtaHeading',
+            title: 'Final CTA Heading',
+            type: 'string'
+        }),
+        defineField({
+            name: 'finalCtaText',
+            title: 'Final CTA Text',
+            type: 'text',
+            rows: 3
         })
 	],
     preview: {
