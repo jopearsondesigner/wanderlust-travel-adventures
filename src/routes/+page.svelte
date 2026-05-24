@@ -151,6 +151,46 @@
     <a href="/about" class="text-link">Meet Kristina</a>
   </div>
 </section>
+<section class="process-section">
+  <div class="section-inner">
+    <p class="eyebrow light">How it works</p>
+    <h2>A simple planning process, designed around you.</h2>
+
+    <p class="section-subhead">
+      From the first conversation to the final itinerary, every step is handled
+      with care, clarity, and attention to detail.
+    </p>
+
+    <div class="process-grid">
+      <div class="process-step">
+        <span>01</span>
+        <h3>Share your vision</h3>
+        <p>
+          We start by learning how you want to travel — your style, priorities,
+          timeline, budget, and dream destinations.
+        </p>
+      </div>
+
+      <div class="process-step">
+        <span>02</span>
+        <h3>Design the experience</h3>
+        <p>
+          Your trip is thoughtfully planned around the details that matter most,
+          from hotels and flights to guides, tours, and special moments.
+        </p>
+      </div>
+
+      <div class="process-step">
+        <span>03</span>
+        <h3>Travel with support</h3>
+        <p>
+          Once your trip is underway, you have support and guidance so you can
+          relax and enjoy the experience with confidence.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="start" class="cta-section">
   <div class="cta-inner">
     <p class="eyebrow">
