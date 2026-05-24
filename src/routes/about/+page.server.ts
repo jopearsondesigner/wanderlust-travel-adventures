@@ -15,7 +15,14 @@ export const load: PageServerLoad = async () => {
 
 			storyEyebrow,
 			storyHeading,
-			storyParagraphs
+			storyParagraphs,
+
+			valuesHeading,
+			values[]{
+				number,
+				title,
+				text
+			}
 		}`),
   ]);
 

@@ -31,6 +31,30 @@
         "Her approach is personal, thoughtful, and detail-oriented. Instead of handing clients a generic itinerary, she takes time to understand how they want to travel, what matters most, and what kind of experience will feel genuinely memorable.",
         "Through trusted travel relationships and careful planning, Wanderlust Travel Adventures helps simplify the process so clients can enjoy the excitement of travel without carrying the stress of every detail.",
       ];
+
+  const valuesHeading =
+    data.aboutPage?.valuesHeading ??
+    "Designed with care from the first conversation.";
+
+  const values = data.aboutPage?.values?.length
+    ? data.aboutPage.values
+    : [
+        {
+          number: "01",
+          title: "Personal",
+          text: "Every trip begins with your preferences, priorities, travel style, and vision.",
+        },
+        {
+          number: "02",
+          title: "Curated",
+          text: "Hotels, experiences, guides, and details are chosen with intention and care.",
+        },
+        {
+          number: "03",
+          title: "Supported",
+          text: "You have guidance before and during your trip, so the experience feels smooth and confident.",
+        },
+      ];
 </script>
 
 <svelte:head>
@@ -69,35 +93,16 @@
 
 <section class="about-values">
   <div class="section-inner">
-    <h2>Designed with care from the first conversation.</h2>
+    <h2>{valuesHeading}</h2>
 
     <div class="process-grid">
-      <div class="process-step">
-        <span>01</span>
-        <h3>Personal</h3>
-        <p>
-          Every trip begins with your preferences, priorities, travel style, and
-          vision.
-        </p>
-      </div>
-
-      <div class="process-step">
-        <span>02</span>
-        <h3>Curated</h3>
-        <p>
-          Hotels, experiences, guides, and details are chosen with intention and
-          care.
-        </p>
-      </div>
-
-      <div class="process-step">
-        <span>03</span>
-        <h3>Supported</h3>
-        <p>
-          You have guidance before and during your trip, so the experience feels
-          smooth and confident.
-        </p>
-      </div>
+      {#each values as value}
+        <div class="process-step">
+          <span>{value.number}</span>
+          <h3>{value.title}</h3>
+          <p>{value.text}</p>
+        </div>
+      {/each}
     </div>
   </div>
 </section>

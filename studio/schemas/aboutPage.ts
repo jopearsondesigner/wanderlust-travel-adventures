@@ -42,6 +42,39 @@ export const aboutPage = defineType({
                     rows: 4
                 }
             ]
+        }),
+        defineField({
+            name: 'valuesHeading',
+            title: 'Values Section Heading',
+            type: 'string'
+        }),
+        defineField({
+            name: 'values',
+            title: 'Values',
+            type: 'array',
+            of: [
+                {
+                    type: 'object',
+                    fields: [
+                        defineField({
+                            name: 'number',
+                            title: 'Number',
+                            type: 'string'
+                        }),
+                        defineField({
+                            name: 'title',
+                            title: 'Title',
+                            type: 'string'
+                        }),
+                        defineField({
+                            name: 'text',
+                            title: 'Text',
+                            type: 'text',
+                            rows: 2
+                        })
+                    ]
+                }
+            ]
         })
 	],
 	preview: {
