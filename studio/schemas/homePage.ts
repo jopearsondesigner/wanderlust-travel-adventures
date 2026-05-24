@@ -25,6 +25,47 @@ export const homePage = defineType({
 			name: 'heroVideoUrl',
 			title: 'Hero Video URL',
 			type: 'url'
-		})
-	]
+		}),
+        defineField({
+            name: 'valueHeading',
+            title: 'Value Section Heading',
+            type: 'string'
+        }),
+        defineField({
+            name: 'valueSubhead',
+            title: 'Value Section Subhead',
+            type: 'text',
+            rows: 3
+        }),
+        defineField({
+            name: 'valueCards',
+            title: 'Value Cards',
+            type: 'array',
+            of: [
+                {
+                    type: 'object',
+                    fields: [
+                        defineField({
+                            name: 'title',
+                            title: 'Title',
+                            type: 'string'
+                        }),
+                        defineField({
+                            name: 'text',
+                            title: 'Text',
+                            type: 'text',
+                            rows: 2
+                        })
+                    ]
+                }
+            ]
+        })
+	],
+    preview: {
+        prepare() {
+            return {
+                title: 'Home Page'
+            };
+        }
+    }
 });

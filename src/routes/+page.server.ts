@@ -13,7 +13,13 @@ export const load: PageServerLoad = async () => {
 			heroHeadline,
 			heroSubhead,
 			heroCtaText,
-			heroVideoUrl
+			heroVideoUrl,
+			valueHeading,
+			valueSubhead,
+			valueCards[]{
+				title,
+				text
+			}
 		}`),
   ]);
 

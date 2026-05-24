@@ -23,6 +23,30 @@
   const heroVideoUrl =
     data.homePage?.heroVideoUrl ??
     "https://cdn.prod.website-files.com/69ea1c23b5297217697a8953/69f00ffb69f3211927aa2f45_hero_video_mp4.mp4";
+
+  const valueHeading =
+    data.homePage?.valueHeading ?? "Effortless travel, thoughtfully designed.";
+
+  const valueSubhead =
+    data.homePage?.valueSubhead ??
+    "We plan every detail around your preferences, so you can relax and enjoy the experience from start to finish.";
+
+  const valueCards = data.homePage?.valueCards?.length
+    ? data.homePage.valueCards
+    : [
+        {
+          title: "Personalized to you",
+          text: "Every itinerary is built around your preferences, pace, and priorities.",
+        },
+        {
+          title: "Seamless from start to finish",
+          text: "From first idea to final booking, every detail is handled for you.",
+        },
+        {
+          title: "Travel with confidence",
+          text: "Trusted planning ensures a smooth, stress-free experience.",
+        },
+      ];
 </script>
 
 <svelte:head>
@@ -69,31 +93,17 @@
 </section>
 <section class="value-section">
   <div class="section-inner">
-    <h2>Effortless travel, thoughtfully designed.</h2>
-    <p class="section-subhead">
-      We plan every detail around your preferences, so you can relax and enjoy
-      the experience from start to finish.
-    </p>
+    <h2>{valueHeading}</h2>
+
+    <p class="section-subhead">{valueSubhead}</p>
+
     <div class="value-grid">
-      <div class="value-card">
-        <h3>Personalized to you</h3>
-        <p>
-          Every itinerary is built around your preferences, pace, and
-          priorities.
-        </p>
-      </div>
-
-      <div class="value-card">
-        <h3>Seamless from start to finish</h3>
-        <p>
-          From first idea to final booking, every detail is handled for you.
-        </p>
-      </div>
-
-      <div class="value-card">
-        <h3>Travel with confidence</h3>
-        <p>Trusted planning ensures a smooth, stress-free experience.</p>
-      </div>
+      {#each valueCards as card}
+        <div class="value-card">
+          <h3>{card.title}</h3>
+          <p>{card.text}</p>
+        </div>
+      {/each}
     </div>
   </div>
 </section>
