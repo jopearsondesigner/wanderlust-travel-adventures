@@ -101,6 +101,50 @@ export const homePage = defineType({
                     ]
                 }
             ]
+        }),
+        defineField({
+            name: 'processEyebrow',
+            title: 'Process Eyebrow',
+            type: 'string'
+        }),
+        defineField({
+            name: 'processHeading',
+            title: 'Process Section Heading',
+            type: 'string'
+        }),
+        defineField({
+            name: 'processSubhead',
+            title: 'Process Section Subhead',
+            type: 'text',
+            rows: 3
+        }),
+        defineField({
+            name: 'processSteps',
+            title: 'Process Steps',
+            type: 'array',
+            of: [
+                {
+                    type: 'object',
+                    fields: [
+                        defineField({
+                            name: 'number',
+                            title: 'Step Number',
+                            type: 'string'
+                        }),
+                        defineField({
+                            name: 'title',
+                            title: 'Title',
+                            type: 'string'
+                        }),
+                        defineField({
+                            name: 'text',
+                            title: 'Text',
+                            type: 'text',
+                            rows: 2
+                        })
+                    ]
+                }
+            ]
         })
 	],
     preview: {

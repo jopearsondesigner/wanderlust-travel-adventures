@@ -33,6 +33,15 @@ export const load: PageServerLoad = async () => {
 						url
 					}
 				}
+			},
+
+			processEyebrow,
+			processHeading,
+			processSubhead,
+			processSteps[]{
+				number,
+				title,
+				text
 			}
 		}`),
   ]);
