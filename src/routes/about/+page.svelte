@@ -67,8 +67,6 @@
 
 <section class="about-hero">
   <div class="about-inner">
-    <p class="eyebrow light">About Wanderlust</p>
-
     <p class="eyebrow light">{heroEyebrow}</p>
 
     <h1>{heroHeadline}</h1>
