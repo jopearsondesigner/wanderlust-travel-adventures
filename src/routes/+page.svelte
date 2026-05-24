@@ -136,6 +136,21 @@
     </div>
   </div>
 </section>
+<section class="advisor-section">
+  <div class="advisor-inner">
+    <p class="eyebrow dark">Meet your travel advisor</p>
+    <h2>Thoughtful travel planning, guided by real expertise.</h2>
+
+    <p>
+      Wanderlust Travel Adventures is led by Kristina, a luxury travel advisor
+      who designs personalized trips with care, taste, and attention to every
+      detail — from boutique hotels and private guides to seamless itineraries
+      and meaningful experiences.
+    </p>
+
+    <a href="/about" class="text-link">Meet Kristina</a>
+  </div>
+</section>
 <section id="start" class="cta-section">
   <div class="cta-inner">
     <p class="eyebrow">
