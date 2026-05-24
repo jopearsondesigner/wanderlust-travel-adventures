@@ -47,6 +47,48 @@
           text: "Trusted planning ensures a smooth, stress-free experience.",
         },
       ];
+  const servicesHeading =
+    data.homePage?.servicesHeading ??
+    "Curated travel for life’s most meaningful moments.";
+
+  const servicesSubhead =
+    data.homePage?.servicesSubhead ??
+    "From honeymoons to once-in-a-lifetime escapes, every trip is planned with care, taste, and attention to detail.";
+
+  const services = data.homePage?.services?.length
+    ? data.homePage.services
+    : [
+        {
+          title: "Honeymoons & Romantic Getaways",
+          description:
+            "Beautifully planned escapes designed to feel effortless and unforgettable.",
+          image: {
+            asset: {
+              url: "/images/honeymoon.jpg",
+            },
+          },
+        },
+        {
+          title: "Adventure & Exploration",
+          description:
+            "Every journey is thoughtfully crafted to balance discovery, comfort, and unforgettable moments.",
+          image: {
+            asset: {
+              url: "/images/adventure.jpg",
+            },
+          },
+        },
+        {
+          title: "Curated Luxury Escapes",
+          description:
+            "From boutique stays to world-class experiences, every detail is elevated.",
+          image: {
+            asset: {
+              url: "/images/luxury.jpg",
+            },
+          },
+        },
+      ];
 </script>
 
 <svelte:head>
@@ -109,56 +151,25 @@
 </section>
 <section class="services-section">
   <div class="section-inner">
-    <h2>Curated travel for life’s most meaningful moments.</h2>
-    <p class="section-subhead">
-      From honeymoons to once-in-a-lifetime escapes, every trip is planned with
-      care, taste, and attention to detail.
-    </p>
+    <h2>{servicesHeading}</h2>
+
+    <p class="section-subhead">{servicesSubhead}</p>
+
     <div class="services-grid">
-      <div class="service-card">
-        <img
-          src="/images/honeymoon.jpg"
-          alt="Honeymoons"
-          class="service-image"
-        />
-        <div class="service-overlay">
-          <h3>Honeymoons & Romantic Getaways</h3>
-          <p>
-            Beautifully planned escapes designed to feel effortless and
-            unforgettable.
-          </p>
-        </div>
-      </div>
+      {#each services as service}
+        <div class="service-card">
+          <img
+            src={service.image?.asset?.url}
+            alt={service.title}
+            class="service-image"
+          />
 
-      <div class="service-card">
-        <img
-          src="/images/adventure.jpg"
-          alt="Adventure & Exploration"
-          class="service-image"
-        />
-        <div class="service-overlay">
-          <h3>Adventure & Exploration</h3>
-          <p>
-            Every journey is thoughtfully crafted to balance discovery, comfort,
-            and unforgettable moments.
-          </p>
+          <div class="service-overlay">
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+          </div>
         </div>
-      </div>
-
-      <div class="service-card">
-        <img
-          src="/images/luxury.jpg"
-          alt="Curated Luxury Escapes"
-          class="service-image"
-        />
-        <div class="service-overlay">
-          <h3>Curated Luxury Escapes</h3>
-          <p>
-            From boutique stays to world-class experiences, every detail is
-            elevated.
-          </p>
-        </div>
-      </div>
+      {/each}
     </div>
   </div>
 </section>

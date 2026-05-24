@@ -9,16 +9,30 @@ export const load: PageServerLoad = async () => {
 			phoneNumber,
 			ctaText
 		}`),
+
     sanityClient.fetch(`*[_type == "homePage"][0]{
 			heroHeadline,
 			heroSubhead,
 			heroCtaText,
 			heroVideoUrl,
+
 			valueHeading,
 			valueSubhead,
 			valueCards[]{
 				title,
 				text
+			},
+
+			servicesHeading,
+			servicesSubhead,
+			services[]{
+				title,
+				description,
+				image{
+					asset->{
+						url
+					}
+				}
 			}
 		}`),
   ]);

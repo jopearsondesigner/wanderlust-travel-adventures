@@ -59,6 +59,48 @@ export const homePage = defineType({
                     ]
                 }
             ]
+        }),
+        defineField({
+            name: 'servicesHeading',
+            title: 'Services Section Heading',
+            type: 'string'
+        }),
+        defineField({
+            name: 'servicesSubhead',
+            title: 'Services Section Subhead',
+            type: 'text',
+            rows: 3
+        }),
+        defineField({
+            name: 'services',
+            title: 'Services',
+            type: 'array',
+            of: [
+                {
+                    type: 'object',
+                    fields: [
+                        defineField({
+                            name: 'title',
+                            title: 'Title',
+                            type: 'string'
+                        }),
+                        defineField({
+                            name: 'description',
+                            title: 'Description',
+                            type: 'text',
+                            rows: 2
+                        }),
+                        defineField({
+                            name: 'image',
+                            title: 'Image',
+                            type: 'image',
+                            options: {
+                                hotspot: true
+                            }
+                        })
+                    ]
+                }
+            ]
         })
 	],
     preview: {
