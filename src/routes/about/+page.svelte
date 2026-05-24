@@ -1,4 +1,12 @@
 <script lang="ts">
+  import type { PageData } from "./$types";
+
+  let { data }: { data: PageData } = $props();
+
+  const contactEmail =
+    data.siteSettings?.contactEmail ??
+    "kristina@wanderlusttraveladventures.com";
+  const ctaText = data.siteSettings?.ctaText ?? "Start Planning My Trip";
 </script>
 
 <svelte:head>
@@ -101,8 +109,6 @@
       bring the details together.
     </p>
 
-    <a href="mailto:kristina@wanderlusttraveladventures.com" class="cta"
-      >Start Planning My Trip</a
-    >
+    <a href={`mailto:${contactEmail}`} class="cta">{ctaText}</a>
   </div>
 </section>
