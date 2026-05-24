@@ -6,7 +6,18 @@
   const contactEmail =
     data.siteSettings?.contactEmail ??
     "kristina@wanderlusttraveladventures.com";
+
   const ctaText = data.siteSettings?.ctaText ?? "Start Planning My Trip";
+
+  const heroEyebrow = data.aboutPage?.heroEyebrow ?? "About Wanderlust";
+
+  const heroHeadline =
+    data.aboutPage?.heroHeadline ??
+    "Thoughtful travel planning for trips that feel personal, seamless, and unforgettable.";
+
+  const heroText =
+    data.aboutPage?.heroText ??
+    "Wanderlust Travel Adventures is led by Kristina, a travel advisor who helps clients plan meaningful trips with care, taste, and attention to every detail.";
 </script>
 
 <svelte:head>
@@ -21,16 +32,11 @@
   <div class="about-inner">
     <p class="eyebrow light">About Wanderlust</p>
 
-    <h1>
-      Thoughtful travel planning for trips that feel personal, seamless, and
-      unforgettable.
-    </h1>
+    <p class="eyebrow light">{heroEyebrow}</p>
 
-    <p>
-      Wanderlust Travel Adventures is led by Kristina, a travel advisor who
-      helps clients plan meaningful trips with care, taste, and attention to
-      every detail.
-    </p>
+    <h1>{heroHeadline}</h1>
+
+    <p>{heroText}</p>
   </div>
 </section>
 

@@ -1,4 +1,5 @@
+import { aboutPage } from './aboutPage';
 import { homePage } from './homePage';
 import { siteSettings } from './siteSettings';
 
-export const schemaTypes = [siteSettings, homePage];
+export const schemaTypes = [siteSettings, homePage, aboutPage];

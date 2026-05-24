@@ -2,12 +2,21 @@ import type { PageServerLoad } from "./$types";
 import { sanityClient } from "$lib/sanity/client";
 
 export const load: PageServerLoad = async () => {
-  const siteSettings = await sanityClient.fetch(`*[_type == "siteSettings"][0]{
-		contactEmail,
-		ctaText
-	}`);
+  const [siteSettings, aboutPage] = await Promise.all([
+    sanityClient.fetch(`*[_type == "siteSettings"][0]{
+			contactEmail,
+			ctaText
+		}`),
+
+    sanityClient.fetch(`*[_type == "aboutPage"][0]{
+			heroEyebrow,
+			heroHeadline,
+			heroText
+		}`),
+  ]);
 
   return {
     siteSettings,
+    aboutPage,
   };
 };
