@@ -1,4 +1,4 @@
-/*style.css*/
+/* style.css */
 /* ================================
    RESET
 ================================ */
@@ -254,7 +254,8 @@ p {
 .services-section .section-inner {
   max-width: 1120px;
 }
-.services-section .services-section h2 {
+
+.services-section h2 {
   max-width: 720px;
   margin: 0 auto 18px;
   font-size: 44px;
@@ -398,18 +399,6 @@ p {
   transform: translateY(-2px);
 }
 
-Then inside your existing @media (max-width: 900px) block, add this:
-
-  .advisor-section {
-  padding: 100px 24px;
-}
-
-Then inside your existing @media (max-width: 600px) block, add this:
-
-  .advisor-section h2 {
-  font-size: 34px;
-}
-
 /* ================================
    PROCESS SECTION
 ================================ */
@@ -474,24 +463,6 @@ Then inside your existing @media (max-width: 600px) block, add this:
   color: #555;
 }
 
-Then inside your existing @media (max-width: 900px) block, add:
-
-  .process-section {
-  padding: 100px 24px;
-}
-
-.process-grid {
-  grid-template-columns: 1fr;
-  gap: 28px;
-  margin-top: 56px;
-}
-
-Then inside your existing @media (max-width: 600px) block, add:
-
-  .process-section h2 {
-  font-size: 34px;
-}
-
 /* ================================
    CTA SECTION
 ================================ */
@@ -499,19 +470,29 @@ Then inside your existing @media (max-width: 600px) block, add:
 .cta-section {
   background: #0b0b0b;
   color: #fff;
-  padding: 140px 24px;
+  padding: 140px 24px 170px;
   text-align: center;
 }
 
 .cta-section .cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 32px;
   background: #fff;
   color: #000;
-  border: none;
+  border: 1px solid transparent;
+  box-shadow: none;
+  transform: none;
 }
 
 .cta-section .cta:hover {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.88);
   color: #000;
+  border-color: transparent;
+  box-shadow: none;
+  transform: none;
 }
 
 .cta-inner {
@@ -562,15 +543,22 @@ Then inside your existing @media (max-width: 600px) block, add:
   }
 
   .value-grid,
-  .services-grid {
+  .services-grid,
+  .process-grid {
     grid-template-columns: 1fr;
     gap: 28px;
   }
 
   .value-section,
   .services-section,
+  .advisor-section,
+  .process-section,
   .cta-section {
     padding: 100px 24px;
+  }
+
+  .process-grid {
+    margin-top: 56px;
   }
 
   .service-card {
@@ -605,8 +593,10 @@ Then inside your existing @media (max-width: 600px) block, add:
 
   .value-section h2,
   .services-section h2,
+  .advisor-section h2,
+  .process-section h2,
   .cta-section h2 {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .value-grid {

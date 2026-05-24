@@ -203,6 +203,8 @@
       from the first idea to the final itinerary.
     </p>
 
-    <a href="#start" class="cta">Start Planning My Trip</a>
+    <a href="mailto:kristina@wanderlusttraveladventures.com" class="cta"
+      >Start Planning My Trip</a
+    >
   </div>
 </section>
