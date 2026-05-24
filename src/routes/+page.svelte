@@ -8,7 +8,21 @@
   const contactEmail =
     data.siteSettings?.contactEmail ??
     "kristina@wanderlusttraveladventures.com";
+
   const ctaText = data.siteSettings?.ctaText ?? "Start Planning My Trip";
+
+  const heroHeadline =
+    data.homePage?.heroHeadline ?? "Travel, designed entirely around you.";
+
+  const heroSubhead =
+    data.homePage?.heroSubhead ??
+    "You bring the vision. We handle every detail — from first idea to final itinerary.";
+
+  const heroCtaText = data.homePage?.heroCtaText ?? ctaText;
+
+  const heroVideoUrl =
+    data.homePage?.heroVideoUrl ??
+    "https://cdn.prod.website-files.com/69ea1c23b5297217697a8953/69f00ffb69f3211927aa2f45_hero_video_mp4.mp4";
 </script>
 
 <svelte:head>
@@ -43,19 +57,13 @@
     />
   </header>
   <video autoplay muted loop playsinline class="hero-video">
-    <source
-      src="https://cdn.prod.website-files.com/69ea1c23b5297217697a8953/69f00ffb69f3211927aa2f45_hero_video_mp4.mp4"
-      type="video/mp4"
-    />
+    <source src={heroVideoUrl} type="video/mp4" />
   </video>
   <div class="overlay"></div>
   <div class="hero-content">
-    <h1>Travel, designed entirely around you.</h1>
-    <p>
-      You bring the vision. We handle every detail — from first idea to final
-      itinerary.
-    </p>
-    <a href="#start" class="cta">Start Planning My Trip</a>
+    <h1>{heroHeadline}</h1>
+    <p>{heroSubhead}</p>
+    <a href="#start" class="cta">{heroCtaText}</a>
   </div>
   <div class="scroll-cue">Scroll</div>
 </section>
