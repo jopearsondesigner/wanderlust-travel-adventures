@@ -1,6 +1,14 @@
 <!--src/routes/+page.svelte-->
 
 <script lang="ts">
+  import type { PageData } from "./$types";
+
+  let { data }: { data: PageData } = $props();
+
+  const contactEmail =
+    data.siteSettings?.contactEmail ??
+    "kristina@wanderlusttraveladventures.com";
+  const ctaText = data.siteSettings?.ctaText ?? "Start Planning My Trip";
 </script>
 
 <svelte:head>
@@ -203,8 +211,6 @@
       from the first idea to the final itinerary.
     </p>
 
-    <a href="mailto:kristina@wanderlusttraveladventures.com" class="cta"
-      >Start Planning My Trip</a
-    >
+    <a href={`mailto:${contactEmail}`} class="cta">{ctaText}</a>
   </div>
 </section>
