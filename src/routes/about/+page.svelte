@@ -18,6 +18,19 @@
   const heroText =
     data.aboutPage?.heroText ??
     "Wanderlust Travel Adventures is led by Kristina, a travel advisor who helps clients plan meaningful trips with care, taste, and attention to every detail.";
+
+  const storyEyebrow = data.aboutPage?.storyEyebrow ?? "Meet Kristina";
+
+  const storyHeading =
+    data.aboutPage?.storyHeading ?? "Travel guidance shaped around you.";
+
+  const storyParagraphs = data.aboutPage?.storyParagraphs?.length
+    ? data.aboutPage.storyParagraphs
+    : [
+        "Kristina helps travelers turn ideas into beautifully planned experiences — from romantic getaways and honeymoons to curated escapes, family trips, and once-in-a-lifetime adventures.",
+        "Her approach is personal, thoughtful, and detail-oriented. Instead of handing clients a generic itinerary, she takes time to understand how they want to travel, what matters most, and what kind of experience will feel genuinely memorable.",
+        "Through trusted travel relationships and careful planning, Wanderlust Travel Adventures helps simplify the process so clients can enjoy the excitement of travel without carrying the stress of every detail.",
+      ];
 </script>
 
 <svelte:head>
@@ -43,28 +56,13 @@
 <section class="about-story">
   <div class="about-story-inner">
     <div class="about-copy">
-      <p class="eyebrow light">Meet Kristina</p>
+      <p class="eyebrow light">{storyEyebrow}</p>
 
-      <h2>Travel guidance shaped around you.</h2>
+      <h2>{storyHeading}</h2>
 
-      <p>
-        Kristina helps travelers turn ideas into beautifully planned experiences
-        — from romantic getaways and honeymoons to curated escapes, family
-        trips, and once-in-a-lifetime adventures.
-      </p>
-
-      <p>
-        Her approach is personal, thoughtful, and detail-oriented. Instead of
-        handing clients a generic itinerary, she takes time to understand how
-        they want to travel, what matters most, and what kind of experience will
-        feel genuinely memorable.
-      </p>
-
-      <p>
-        Through trusted travel relationships and careful planning, Wanderlust
-        Travel Adventures helps simplify the process so clients can enjoy the
-        excitement of travel without carrying the stress of every detail.
-      </p>
+      {#each storyParagraphs as paragraph}
+        <p>{paragraph}</p>
+      {/each}
     </div>
   </div>
 </section>

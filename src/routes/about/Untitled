@@ -11,7 +11,11 @@ export const load: PageServerLoad = async () => {
 		sanityClient.fetch(`*[_type == "aboutPage"][0]{
 			heroEyebrow,
 			heroHeadline,
-			heroText
+			heroText,
+
+			storyEyebrow,
+			storyHeading,
+			storyParagraphs
 		}`)
 	]);
 

@@ -21,7 +21,28 @@ export const aboutPage = defineType({
 			title: 'Hero Text',
 			type: 'text',
 			rows: 3
-		})
+		}),
+        defineField({
+            name: 'storyEyebrow',
+            title: 'Story Eyebrow',
+            type: 'string'
+        }),
+        defineField({
+            name: 'storyHeading',
+            title: 'Story Heading',
+            type: 'string'
+        }),
+        defineField({
+            name: 'storyParagraphs',
+            title: 'Story Paragraphs',
+            type: 'array',
+            of: [
+                {
+                    type: 'text',
+                    rows: 4
+                }
+            ]
+        })
 	],
 	preview: {
 		prepare() {
@@ -29,5 +50,6 @@ export const aboutPage = defineType({
 				title: 'About Page'
 			};
 		}
-	}
+	},
+
 });
