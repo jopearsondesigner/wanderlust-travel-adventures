@@ -145,6 +145,27 @@ export const homePage = defineType({
                     ]
                 }
             ]
+        }),
+        defineField({
+            name: 'advisorEyebrow',
+            title: 'Advisor Eyebrow',
+            type: 'string'
+        }),
+        defineField({
+            name: 'advisorHeading',
+            title: 'Advisor Section Heading',
+            type: 'string'
+        }),
+        defineField({
+            name: 'advisorText',
+            title: 'Advisor Section Text',
+            type: 'text',
+            rows: 4
+        }),
+        defineField({
+            name: 'advisorLinkText',
+            title: 'Advisor Link Text',
+            type: 'string'
         })
 	],
     preview: {

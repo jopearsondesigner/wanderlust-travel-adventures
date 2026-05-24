@@ -118,6 +118,18 @@
           text: "Once your trip is underway, you have support and guidance so you can relax and enjoy the experience with confidence.",
         },
       ];
+  const advisorEyebrow =
+    data.homePage?.advisorEyebrow ?? "Meet your travel advisor";
+
+  const advisorHeading =
+    data.homePage?.advisorHeading ??
+    "Thoughtful travel planning, guided by real expertise.";
+
+  const advisorText =
+    data.homePage?.advisorText ??
+    "Wanderlust Travel Adventures is led by Kristina, a luxury travel advisor who designs personalized trips with care, taste, and attention to every detail — from boutique hotels and private guides to seamless itineraries and meaningful experiences.";
+
+  const advisorLinkText = data.homePage?.advisorLinkText ?? "Meet Kristina";
 </script>
 
 <svelte:head>
@@ -204,17 +216,13 @@
 </section>
 <section class="advisor-section">
   <div class="advisor-inner">
-    <p class="eyebrow dark">Meet your travel advisor</p>
-    <h2>Thoughtful travel planning, guided by real expertise.</h2>
+    <p class="eyebrow dark">{advisorEyebrow}</p>
 
-    <p>
-      Wanderlust Travel Adventures is led by Kristina, a luxury travel advisor
-      who designs personalized trips with care, taste, and attention to every
-      detail — from boutique hotels and private guides to seamless itineraries
-      and meaningful experiences.
-    </p>
+    <h2>{advisorHeading}</h2>
 
-    <a href="/about" class="text-link">Meet Kristina</a>
+    <p>{advisorText}</p>
+
+    <a href="/about" class="text-link">{advisorLinkText}</a>
   </div>
 </section>
 <section class="process-section">

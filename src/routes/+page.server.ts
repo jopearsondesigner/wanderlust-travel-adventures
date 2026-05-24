@@ -42,7 +42,12 @@ export const load: PageServerLoad = async () => {
 				number,
 				title,
 				text
-			}
+			},
+
+			advisorEyebrow,
+			advisorHeading,
+			advisorText,
+			advisorLinkText
 		}`),
   ]);
 
