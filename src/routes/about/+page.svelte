@@ -1,5 +1,9 @@
+<!--src/routes/about/+page.svelte-->
 <script lang="ts">
   import type { PageData } from "./$types";
+
+  import Header from "$lib/components/Header.svelte";
+  import Footer from "$lib/components/Footer.svelte";
 
   let { data }: { data: PageData } = $props();
 
@@ -64,6 +68,7 @@
     content="Meet Kristina, the travel advisor behind Wanderlust Travel Adventures, offering thoughtful, personalized travel planning for meaningful trips."
   />
 </svelte:head>
+<Header dark={true} />
 
 <section class="about-hero">
   <div class="about-inner">
@@ -119,3 +124,4 @@
     <a href={`mailto:${contactEmail}`} class="cta">{ctaText}</a>
   </div>
 </section>
+<Footer />

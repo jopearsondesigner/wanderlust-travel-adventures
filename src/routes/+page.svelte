@@ -2,6 +2,8 @@
 
 <script lang="ts">
   import type { PageData } from "./$types";
+  import Header from "$lib/components/Header.svelte";
+  import Footer from "$lib/components/Footer.svelte";
 
   let { data }: { data: PageData } = $props();
 
@@ -168,13 +170,7 @@
 </svelte:head>
 
 <section class="hero">
-  <header class="hero-nav">
-    <img
-      src="/images/wanderlust-logo.svg"
-      alt="Wanderlust Travel Adventures"
-      class="logo"
-    />
-  </header>
+  <Header />
   <video autoplay muted loop playsinline class="hero-video">
     <source src={heroVideoUrl} type="video/mp4" />
   </video>
@@ -267,3 +263,4 @@
     <a href={`mailto:${contactEmail}`} class="cta">{ctaText}</a>
   </div>
 </section>
+<Footer />
