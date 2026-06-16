@@ -7,6 +7,16 @@
 
   let { data }: { data: PageData } = $props();
 
+  const siteUrl = "https://www.wanderlusttraveladventures.com";
+  const pageUrl = `${siteUrl}/`;
+  const ogImageUrl = `${siteUrl}/images/wanderlust-og-image.png`;
+
+  const pageTitle =
+    "Wanderlust Travel Adventures | Personalized Travel Planning";
+
+  const pageDescription =
+    "Personalized luxury travel planning for honeymoons, romantic getaways, curated escapes, and unforgettable adventures.";
+
   const ctaText = data.siteSettings?.ctaText ?? "Start Planning My Trip";
 
   const heroHeadline =
@@ -146,11 +156,33 @@
 </script>
 
 <svelte:head>
-  <title>Wanderlust Travel Adventures</title>
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDescription} />
+
+  <link rel="canonical" href={pageUrl} />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Wanderlust Travel Adventures" />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={pageDescription} />
+  <meta property="og:url" content={pageUrl} />
+  <meta property="og:image" content={ogImageUrl} />
   <meta
-    name="description"
-    content="Personalized luxury travel planning for honeymoons, romantic getaways, curated escapes, and unforgettable adventures."
+    property="og:image:alt"
+    content="A scenic mountain lake with the message Thoughtful travel planning, designed around you."
   />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={pageTitle} />
+  <meta name="twitter:description" content={pageDescription} />
+  <meta name="twitter:image" content={ogImageUrl} />
+  <meta
+    name="twitter:image:alt"
+    content="A scenic mountain lake with the message Thoughtful travel planning, designed around you."
+  />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
     rel="preconnect"

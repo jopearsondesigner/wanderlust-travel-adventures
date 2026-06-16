@@ -8,14 +8,45 @@
   const contactPhone = "+1 954-683-5548";
   const contactPhoneHref = "tel:+19546835548";
   const officeHours = "Monday–Friday, 9:00 AM–6:00 PM EST";
+
+  const siteUrl = "https://www.wanderlusttraveladventures.com";
+  const pageUrl = `${siteUrl}/contact`;
+  const ogImageUrl = `${siteUrl}/images/wanderlust-og-image.png`;
+
+  const pageTitle = "Contact | Wanderlust Travel Adventures";
+
+  const pageDescription =
+    "Contact Wanderlust Travel Adventures to begin planning a personalized, thoughtfully designed trip.";
 </script>
 
 <svelte:head>
-  <title>Contact | Wanderlust Travel Adventures</title>
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDescription} />
+
+  <link rel="canonical" href={pageUrl} />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Wanderlust Travel Adventures" />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={pageDescription} />
+  <meta property="og:url" content={pageUrl} />
+  <meta property="og:image" content={ogImageUrl} />
   <meta
-    name="description"
-    content="Contact Wanderlust Travel Adventures to begin planning a personalized, thoughtfully designed trip."
+    property="og:image:alt"
+    content="A scenic mountain lake with the message Thoughtful travel planning, designed around you."
   />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={pageTitle} />
+  <meta name="twitter:description" content={pageDescription} />
+  <meta name="twitter:image" content={ogImageUrl} />
+  <meta
+    name="twitter:image:alt"
+    content="A scenic mountain lake with the message Thoughtful travel planning, designed around you."
+  />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
     rel="preconnect"
