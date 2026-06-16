@@ -17,7 +17,7 @@
     <nav>
       <a href="/">Home</a>
       <a href="/about">About</a>
-      <a href="mailto:kristina@wanderlusttraveladventures.com">Contact</a>
+      <a href="/contact">Contact</a>
     </nav>
   </div>
 </header>

@@ -1,0 +1,282 @@
+[
+  {
+    "fields": [
+      {
+        "name": "businessName",
+        "type": "string"
+      },
+      {
+        "name": "contactEmail",
+        "type": "string"
+      },
+      {
+        "name": "phoneNumber",
+        "type": "string"
+      },
+      {
+        "name": "ctaText",
+        "type": "string",
+        "title": "CTA Text"
+      }
+    ],
+    "name": "siteSettings",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "name": "heroHeadline",
+        "type": "string"
+      },
+      {
+        "rows": 3,
+        "name": "heroSubhead",
+        "type": "text"
+      },
+      {
+        "name": "heroCtaText",
+        "type": "string",
+        "title": "Hero CTA Text"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "name": "heroVideoUrl",
+        "type": "url",
+        "title": "Hero Video URL"
+      },
+      {
+        "name": "valueHeading",
+        "type": "string",
+        "title": "Value Section Heading"
+      },
+      {
+        "rows": 3,
+        "name": "valueSubhead",
+        "type": "text",
+        "title": "Value Section Subhead"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "title",
+                "type": "string"
+              },
+              {
+                "rows": 2,
+                "name": "text",
+                "type": "text"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "valueCards",
+        "type": "array"
+      },
+      {
+        "name": "servicesHeading",
+        "type": "string",
+        "title": "Services Section Heading"
+      },
+      {
+        "rows": 3,
+        "name": "servicesSubhead",
+        "type": "text",
+        "title": "Services Section Subhead"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "title",
+                "type": "string"
+              },
+              {
+                "rows": 2,
+                "name": "description",
+                "type": "text"
+              },
+              {
+                "options": {
+                  "hotspot": true
+                },
+                "name": "image",
+                "type": "image"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "services",
+        "type": "array"
+      },
+      {
+        "name": "processEyebrow",
+        "type": "string"
+      },
+      {
+        "name": "processHeading",
+        "type": "string",
+        "title": "Process Section Heading"
+      },
+      {
+        "rows": 3,
+        "name": "processSubhead",
+        "type": "text",
+        "title": "Process Section Subhead"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "number",
+                "type": "string",
+                "title": "Step Number"
+              },
+              {
+                "name": "title",
+                "type": "string"
+              },
+              {
+                "rows": 2,
+                "name": "text",
+                "type": "text"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "processSteps",
+        "type": "array"
+      },
+      {
+        "name": "advisorEyebrow",
+        "type": "string"
+      },
+      {
+        "name": "advisorHeading",
+        "type": "string",
+        "title": "Advisor Section Heading"
+      },
+      {
+        "rows": 4,
+        "name": "advisorText",
+        "type": "text",
+        "title": "Advisor Section Text"
+      },
+      {
+        "name": "advisorLinkText",
+        "type": "string"
+      },
+      {
+        "name": "finalCtaEyebrow",
+        "type": "string",
+        "title": "Final CTA Eyebrow"
+      },
+      {
+        "name": "finalCtaHeading",
+        "type": "string",
+        "title": "Final CTA Heading"
+      },
+      {
+        "rows": 3,
+        "name": "finalCtaText",
+        "type": "text",
+        "title": "Final CTA Text"
+      }
+    ],
+    "name": "homePage",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "name": "heroEyebrow",
+        "type": "string"
+      },
+      {
+        "rows": 3,
+        "name": "heroHeadline",
+        "type": "text"
+      },
+      {
+        "rows": 3,
+        "name": "heroText",
+        "type": "text"
+      },
+      {
+        "name": "storyEyebrow",
+        "type": "string"
+      },
+      {
+        "name": "storyHeading",
+        "type": "string"
+      },
+      {
+        "of": [
+          {
+            "rows": 4,
+            "type": "text"
+          }
+        ],
+        "name": "storyParagraphs",
+        "type": "array"
+      },
+      {
+        "name": "valuesHeading",
+        "type": "string",
+        "title": "Values Section Heading"
+      },
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "number",
+                "type": "string"
+              },
+              {
+                "name": "title",
+                "type": "string"
+              },
+              {
+                "rows": 2,
+                "name": "text",
+                "type": "text"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "values",
+        "type": "array"
+      }
+    ],
+    "name": "aboutPage",
+    "type": "document"
+  }
+]

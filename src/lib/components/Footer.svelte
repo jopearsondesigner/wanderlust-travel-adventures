@@ -8,7 +8,7 @@
 
     <p>Personalized travel planning for meaningful, memorable escapes.</p>
 
-    <a href="mailto:kristina@wanderlusttraveladventures.com">Start Planning</a>
+    <a href="/contact">Start Planning</a>
   </div>
 </footer>
 

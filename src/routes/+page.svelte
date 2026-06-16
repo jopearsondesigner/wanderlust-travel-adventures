@@ -7,10 +7,6 @@
 
   let { data }: { data: PageData } = $props();
 
-  const contactEmail =
-    data.siteSettings?.contactEmail ??
-    "kristina@wanderlusttraveladventures.com";
-
   const ctaText = data.siteSettings?.ctaText ?? "Start Planning My Trip";
 
   const heroHeadline =
@@ -49,6 +45,7 @@
           text: "Trusted planning ensures a smooth, stress-free experience.",
         },
       ];
+
   const servicesHeading =
     data.homePage?.servicesHeading ??
     "Curated travel for life’s most meaningful moments.";
@@ -91,6 +88,7 @@
           },
         },
       ];
+
   const processEyebrow = data.homePage?.processEyebrow ?? "How it works";
 
   const processHeading =
@@ -120,6 +118,7 @@
           text: "Once your trip is underway, you have support and guidance so you can relax and enjoy the experience with confidence.",
         },
       ];
+
   const advisorEyebrow =
     data.homePage?.advisorEyebrow ?? "Meet your travel advisor";
 
@@ -171,17 +170,22 @@
 
 <section class="hero">
   <Header />
+
   <video autoplay muted loop playsinline class="hero-video">
     <source src={heroVideoUrl} type="video/mp4" />
   </video>
+
   <div class="overlay"></div>
+
   <div class="hero-content">
     <h1>{heroHeadline}</h1>
     <p>{heroSubhead}</p>
-    <a href="#start" class="cta">{heroCtaText}</a>
+    <a href="/contact" class="cta">{heroCtaText}</a>
   </div>
+
   <div class="scroll-cue">Scroll</div>
 </section>
+
 <section class="value-section">
   <div class="section-inner">
     <h2>{valueHeading}</h2>
@@ -198,6 +202,7 @@
     </div>
   </div>
 </section>
+
 <section class="services-section">
   <div class="section-inner">
     <h2>{servicesHeading}</h2>
@@ -222,6 +227,7 @@
     </div>
   </div>
 </section>
+
 <section class="advisor-section">
   <div class="advisor-inner">
     <p class="eyebrow dark">{advisorEyebrow}</p>
@@ -233,6 +239,7 @@
     <a href="/about" class="text-link">{advisorLinkText}</a>
   </div>
 </section>
+
 <section class="process-section">
   <div class="section-inner">
     <p class="eyebrow light">{processEyebrow}</p>
@@ -252,6 +259,7 @@
     </div>
   </div>
 </section>
+
 <section id="start" class="cta-section">
   <div class="cta-inner">
     <p class="eyebrow">{finalCtaEyebrow}</p>
@@ -260,7 +268,8 @@
 
     <p>{finalCtaText}</p>
 
-    <a href={`mailto:${contactEmail}`} class="cta">{ctaText}</a>
+    <a href="/contact" class="cta">{ctaText}</a>
   </div>
 </section>
+
 <Footer />
