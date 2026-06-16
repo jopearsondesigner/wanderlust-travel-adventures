@@ -8,7 +8,10 @@
 
     <p>Personalized travel planning for meaningful, memorable escapes.</p>
 
-    <a href="/contact">Start Planning</a>
+    <div class="footer-links">
+      <a href="/contact">Start Planning</a>
+      <a href="/terms-conditions">Terms & Conditions</a>
+    </div>
   </div>
 </footer>
 
@@ -37,6 +40,13 @@
     font-size: 15px;
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.68);
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
   }
 
   a {
