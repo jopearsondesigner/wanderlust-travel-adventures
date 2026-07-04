@@ -1,3 +1,39 @@
 [build]
   command = "npm run build"
   publish = ".netlify/build"
+
+[[redirects]]
+  from = "/home/contact/"
+  to = "/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/home/contact"
+  to = "/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/how-it-works/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/how-it-works"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/around-the-world/national-geographic-expeditions-specialist/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/around-the-world/national-geographic-expeditions-specialist"
+  to = "/"
+  status = 301
+  force = true
